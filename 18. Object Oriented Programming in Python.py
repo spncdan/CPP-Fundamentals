@@ -130,11 +130,20 @@ print(Lisa.get_name())
 
 Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
 
-# Will return Jason's name
-Jason.get_name()
+# Will return "My name is Jason"
+print(Jason.get_name())
 
-# Will return Jason's occupation
-Jason.get_occupation()
+# Will return "My age is 30"
+print(Jason.get_age())
+
+# Say we want to change Jason's age to 31, we'd do so by doing the following setter...
+Jason.set_age(31)
+
+# Will return "My age is 31" in response to the change
+print(Jason.get_age())
+
+# Will return "My occupation is Writer"
+print(Jason.get_occupation())
 
 # Inheritance is one of the three major concepts in Object Oriented Programming and allows a class to adopt the behvaior of another class while still maintaining it's own identity.
 
@@ -143,5 +152,6 @@ Jason.get_occupation()
 # The class which derives behvor from that of another class is called the 'derived' class while the class form whichthe behavior is derived from is called the 'parent' or 'base' class.
 
 # Inheritance enables programmers to resuse code and thus, 'Avoid reinventing the wheel' while adding various features to such.
+
 
 
