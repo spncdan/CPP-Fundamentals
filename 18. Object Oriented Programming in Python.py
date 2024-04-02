@@ -131,12 +131,10 @@ print(Lisa.get_name())
 Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
 
 # Will return Jason's name
-
-print(Jason.name)
+Jason.get_name()
 
 # Will return Jason's occupation
-
-print(Jason.occupation)
+Jason.get_occupation()
 
 # Inheritance is one of the three major concepts in Object Oriented Programming and allows a class to adopt the behvaior of another class while still maintaining it's own identity.
 
