@@ -127,7 +127,6 @@ Lisa.set_name('Alisa') # Will change Lisa's name within the class to Alisa
 print(Lisa.get_name())
 
 # Say we wanted to create an object for a person called Jason, age 30, Lives at 20 Amsterdam Ave, with a zipcode of 421010
-
 Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
 
 # Will return "My name is Jason"
