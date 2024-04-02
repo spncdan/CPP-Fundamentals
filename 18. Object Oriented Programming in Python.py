@@ -89,7 +89,7 @@ class Person:
     def set_address(self, address):
         self.address = address
 
-    # Setters: Update or Change Class Properties
+    # Setters: Methods which update or Change Class Properties
     def set_name(self, new_name):
         self.name = new_name
 
@@ -158,11 +158,15 @@ print(Jason.get_occupation())
 class Employee(Person): # We add Person in parenthesis to show that the class Employee is derived from the Person class
     def __init__(self, name, age, address, occupation, zipcode, salary, emplid, title): # Constructor
     super().__init__(name, age, address, occupation, zipcode) # super().__init__ refers to referencing the constructor of the parent class of Person which makes it so you do not need to rewrite the properties of the parent class.
+    
+    # Below are the properties of the EMPLOYEE class
     self.title = title
+    
     self.salary = salary
+    
     self.emplid = emplid
     
-    # Getters (Getting class properties)
+    # Getters (Method for getting employee class properties)
     def get_title(self):
         return 'My job title is ' + self.title
         
@@ -172,7 +176,7 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     def get_emplid(self):
         return 'My emplid is ' + str(self.emplid)
     
-    # Setters (Changing/editing existing class properties)
+    # Setters (Method for changing/editing existing employee class properties)
     def set_title(self, title):
         self.title = title
         
@@ -181,9 +185,19 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
         
     def set_emplid(self, emplid):
         self.emplid = emplid
+        
+    # Let's create an object which in the Employee class of Mike, who is 52, lives at 2 High Street, zipcode of 54157, is an Engineers, salary is 100000, emplid of 1234, and is a Level 1 Engineer.
+    
+    Mike = Employee('Mike', 52, '2 High Street', 54157, 'Engineer', 100000, 1234, 'Level 1 - Engineer')
+    
+    # Since we inherited the properties from the Person class, we can simply use get_name from the Person class in order to print out Mike's name
+    
+    print(Mike.get_name()) # Will print out "My name is Mike"
+    print(Mike.get_occupation()) # Will print out "My occupation is Engineer"
+    print(Mike.get_salary()) # Will print out "My salary is 100000"
+    print(Mike.get_address()) # Will print out "My address is 2 High Street"
+    
+    
 
-
-
-
-
+    
 
