@@ -65,7 +65,7 @@ class Person:
     def __init__(self, name, age, address, occupation, zipcode): # Constructors are only called when an object in a class is created or instantiated
         # Properties - variables associated with particular class
         self.name = name
-        self.age = age
+        self.age = age # Encapsulation
         self.address = address
         self.occupation = occupation
         self.zipcode = zipcode
@@ -196,6 +196,46 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     print(Mike.get_occupation()) # Will print out "My occupation is Engineer"
     print(Mike.get_salary()) # Will print out "My salary is 100000"
     print(Mike.get_address()) # Will print out "My address is 2 High Street"
+    
+    # We can have multiple instances of inheritance for one parent class
+    
+    # Let's say we are creating a database management system for a hospital, we can instead use patient here as a patient is a person but not all persons are a patient. Furthermore, a patient has all of the characteristics of a person as well.
+    
+    class Patient(Person): # Patient class is derived from Person class
+    def __init__(self, name, age, address, medical_condition, medication):
+    super().__init__(name, age, address) # Inheriting the properties of the person class
+    
+    # Getter Methods
+    def get_medical_condition(self):
+        return 'Medical Condition is ' + self.medical_condition
+        
+    def get_medication(self):
+        return 'Medication is ' + self.medication
+        
+    # Setter Methods
+    def set_medical_condition(self, medical_condition):
+        self.medical_condition = medical_condition
+        
+    def set_medication(self, medication):
+        self_medication = medication
+    
+    # Instantiating Patient Class
+    patient1 = Patient('Mark', 40, '2 Ocean Avenue', 'Broken Ankle', 'Aspirin')
+    
+    # Encapsulation restricts access to class properties to only class methods, and prevents inherited classes from modifying encapsluated properties.
+    
+    # Furthermore it allows private properties from being access outside of the class.
+    
+    # Safeguards to prevent sensitive information from being public information to other developers
+    
+    # An example of making a private class property (CANNOT BE ACCESSED OUTSIDE OF CLASS) is represented by a double underscore prefix (E.G __nameOfProperty)
+    
+    # You can add if statements which only returns conditions if certain conditions are true (if zipcode is set, if age is greater than 18, etc...)
+    
+    # Method Overriding is a subclass which can override an inherited method from its parent by modifying the behavior of that method
+    
+    # An example is if the patient class can override get_address() method from its parent class (Person) so that when that method is called, it will function differently.
+    
     
     
 
