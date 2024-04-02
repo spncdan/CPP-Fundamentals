@@ -1,5 +1,4 @@
 
-
 # CIS 3100 3/25/24
 
 # Object Oriented Programming in Python
@@ -71,7 +70,7 @@ class Person:
         self.occupation = occupation
         self.zipcode = zipcode
         
-    # Setters: methods that change or update the class properties
+    # Getters: Methods which recieve data stored in class properties
     def get_name(self):
         return f'My name is ' + self.name
     
@@ -90,7 +89,7 @@ class Person:
     def set_address(self, address):
         self.address = address
 
-    # Setters
+    # Setters: Update or Change Class Properties
     def set_name(self, new_name):
         self.name = new_name
 
@@ -113,10 +112,6 @@ Lisa = Person('Lisa', 35, '2 Lexington Ave', 'Architect', 11411)
 Matthew = Person('Matthew', 40, '44 Ocean Drive', 'Banker', 29421)
 Leon = Person('Leon', 21, '4 Water Ave', 'Chef', 24911)
 
-# Say we wanted to create an object for a person called Jason, age 30, Lives at 20 Amsterdam Ave, with a zipcode of 421010
-
-Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
-
 # will return Joan's name
 print(Joan.name)
 
@@ -131,6 +126,18 @@ Lisa.set_name('Alisa') # Will change Lisa's name within the class to Alisa
 # Will return "My name is Alisa" in light of our new changes
 print(Lisa.get_name())
 
+# Say we wanted to create an object for a person called Jason, age 30, Lives at 20 Amsterdam Ave, with a zipcode of 421010
+
+Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
+
+# Will return Jason's name
+
+print(Jason.name)
+
+# Will return Jason's occupation
+
+print(Jason.occupation)
+
 # Inheritance is one of the three major concepts in Object Oriented Programming and allows a class to adopt the behvaior of another class while still maintaining it's own identity.
 
 # The class can inherit properties and methods of another class and still have it's own characteristics.
@@ -138,4 +145,5 @@ print(Lisa.get_name())
 # The class which derives behvor from that of another class is called the 'derived' class while the class form whichthe behavior is derived from is called the 'parent' or 'base' class.
 
 # Inheritance enables programmers to resuse code and thus, 'Avoid reinventing the wheel' while adding various features to such.
+
 
