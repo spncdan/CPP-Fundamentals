@@ -157,7 +157,7 @@ print(Jason.get_occupation())
 
 class Employee(Person): # We add Person in parenthesis to show that the class Employee is derived from the Person class
     def __init__(self, name, age, address, title, salary): # Constructor
-    super().__init__(name, age, address) # super().__init__ refers to referencing the parent class of Person
+    super().__init__(name, age, address) # super().__init__ refers to referencing the parent class of Person (You choose which aspects of the person class you wish to have)
     self.title = title
     self.salary = salary
     
