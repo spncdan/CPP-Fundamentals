@@ -9,9 +9,11 @@
 
 # Another programming paradigm could be procedural which organizes code in functions
 
-# Classes are blueprints and can be used many times
+# Classes are abstract data types created by the user
 
-# Classes have properties and methods, properties are variables which belong to the class
+# Properties are variables which belong to a class
+
+# Methods are functions which belong to a class
 
 # Objects are instances of a class, access attributes and methods associated with the class
 
@@ -54,17 +56,21 @@
 
 # Class provides elegant and sustainable solution to this
 
+# "self" glues these instances together
+
 class Person:
     # Creation of own data type
     # Constructor
     # Methods are special functions that belong in a class
-    def __init__(self, name, age, address, occupation, zipcode): ## __init__ is a constructor and only called when class/object is created and connects functions
+    def __init__(self, name, age, address, occupation, zipcode): # Constructors are only called when an object in a class is created or instantiated
+        # Properties - variables associated with particular class
         self.name = name
         self.age = age
         self.address = address
         self.occupation = occupation
         self.zipcode = zipcode
-
+        
+    # Setters: methods that change or update the class properties
     def get_name(self):
         return f'My name is ' + self.name
     
@@ -83,8 +89,7 @@ class Person:
     def set_address(self, address):
         self.address = address
 
-    # Setters: methods that change or update the class properties
-
+    # Setters
     def set_name(self, new_name):
         self.name = new_name
 
