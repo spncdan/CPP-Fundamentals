@@ -127,6 +127,7 @@ Lisa.set_name('Alisa') # Will change Lisa's name within the class to Alisa
 print(Lisa.get_name())
 
 # Say we wanted to create an object for a person called Jason, age 30, Lives at 20 Amsterdam Ave, with a zipcode of 421010
+
 Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
 
 # Will return "My name is Jason"
@@ -146,11 +147,35 @@ print(Jason.get_occupation())
 
 # Inheritance is one of the three major concepts in Object Oriented Programming and allows a class to adopt the behvaior of another class while still maintaining it's own identity.
 
-# The class can inherit properties and methods of another class and still have it's own characteristics.
+# The class can inherit properties and methods of another class and still have it's own characteristics/identity.
 
-# The class which derives behvor from that of another class is called the 'derived' class while the class form whichthe behavior is derived from is called the 'parent' or 'base' class.
+# The class which derives behavor from that of another class is called the 'derived' class while the class form which the behavior is derived from is called the 'parent' or 'base' class.
 
-# Inheritance enables programmers to resuse code and thus, 'Avoid reinventing the wheel' while adding various features to such.
+# Inheritance enables programmers to resuse code and thus, 'Avoid reinventing the wheel' while adding various features to do such.
+
+# Let's consider creating a derived class of Employee. An employee is a person, but not all persons are an employee. Despite this an employee has all the characteristics of a person and is therefore able to inherit a parent class of a person.
+
+class Employee(Person): # We add Person in parenthesis to show that the class Employee is derived from the Person class
+    def __init__(self, name, age, address, title, salary): # Constructor
+    super().__init__(name, age, address) # super().__init__ refers to referencing the parent class of Person
+    self.title = title
+    self.salary = salary
+    
+    # Getters (Getting class properties)
+    def get_title(self):
+        return 'My job title is ' + self.title
+        
+    def get_salary(self):
+        return 'My salary is ' + str(self.salary)
+    
+    # Setters (Changing/editing existing class properties)
+    def set_title(self, title):
+        self.title = title
+        
+    def set_salary(self, salary):
+        self.salary = salary
+        
+
 
 
 
