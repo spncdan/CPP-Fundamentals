@@ -156,10 +156,11 @@ print(Jason.get_occupation())
 # Let's consider creating a derived class of Employee. An employee is a person, but not all persons are an employee. Despite this an employee has all the characteristics of a person and is therefore able to inherit a parent class of a person.
 
 class Employee(Person): # We add Person in parenthesis to show that the class Employee is derived from the Person class
-    def __init__(self, name, age, address, title, salary): # Constructor
-    super().__init__(name, age, address) # super().__init__ refers to referencing the parent class of Person (You choose which aspects of the person class you wish to have)
+    def __init__(self, name, age, address, occupation, zipcode, salary, emplid, title): # Constructor
+    super().__init__(name, age, address, occupation, zipcode) # super().__init__ refers to referencing the constructor of the parent class of Person which makes it so you do not need to rewrite the properties of the parent class.
     self.title = title
     self.salary = salary
+    self.emplid = emplid
     
     # Getters (Getting class properties)
     def get_title(self):
@@ -167,6 +168,9 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
         
     def get_salary(self):
         return 'My salary is ' + str(self.salary)
+        
+    def get_emplid(self):
+        return 'My emplid is ' + str(self.emplid)
     
     # Setters (Changing/editing existing class properties)
     def set_title(self, title):
@@ -175,6 +179,10 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     def set_salary(self, salary):
         self.salary = salary
         
+    def set_emplid(self, emplid):
+        self.emplid = emplid
+
+
 
 
 
