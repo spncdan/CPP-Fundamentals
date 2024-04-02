@@ -1,4 +1,5 @@
 
+
 # CIS 3100 3/25/24
 
 # Object Oriented Programming in Python
@@ -112,6 +113,10 @@ Lisa = Person('Lisa', 35, '2 Lexington Ave', 'Architect', 11411)
 Matthew = Person('Matthew', 40, '44 Ocean Drive', 'Banker', 29421)
 Leon = Person('Leon', 21, '4 Water Ave', 'Chef', 24911)
 
+# Say we wanted to create an object for a person called Jason, age 30, Lives at 20 Amsterdam Ave, with a zipcode of 421010
+
+Jason = Person('Jason', 30, '20 Amsterdam Ave', 'Writer', 421010)
+
 # will return Joan's name
 print(Joan.name)
 
@@ -133,3 +138,4 @@ print(Lisa.get_name())
 # The class which derives behvor from that of another class is called the 'derived' class while the class form whichthe behavior is derived from is called the 'parent' or 'base' class.
 
 # Inheritance enables programmers to resuse code and thus, 'Avoid reinventing the wheel' while adding various features to such.
+
