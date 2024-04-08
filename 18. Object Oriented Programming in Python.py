@@ -66,7 +66,15 @@ class Person:
         # Properties - variables associated with particular class
         self.name = name
         self.age = age 
-        # Private Address ".__"
+    # Encapsulation restricts access to class properties to only class methods, and prevents inherited classes from modifying encapsluated properties.
+    
+    # Furthermore it allows private properties from being access outside of the class.
+    
+    # Safeguards to prevent sensitive information from being public information to other developers
+    
+    # An example of making a private class property (CANNOT BE ACCESSED OUTSIDE OF CLASS) is represented by a double underscore prefix (E.G __nameOfProperty)
+    
+    # You can add if statements which only returns conditions if certain conditions are true (if zipcode is set, if age is greater than 18, etc...)
         self.__address = address # Encapsulation, prevents you from getting the address of an object in the class can only be accessed by a getter or setter
         self.occupation = occupation
         self.zipcode = zipcode
@@ -182,14 +190,14 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
         return 'My emplid is ' + str(self.emplid)
     
     # Setters (Method for changing/editing existing employee class properties)
-    def set_title(self, title):
-        self.title = title
+    def set_title(self, new_title):
+        self.title = new_title
         
-    def set_salary(self, salary):
-        self.salary = salary
+    def set_salary(self, new_salary):
+        self.salary = new_salary
         
-    def set_emplid(self, emplid):
-        self.emplid = emplid
+    def set_emplid(self, new_emplid):
+        self.emplid = new_emplid
         
     # Let's create an object which in the Employee class of Mike, who is 52, lives at 2 High Street, zipcode of 54157, is an Engineers, salary is 100000, emplid of 1234, and is a Level 1 Engineer.
     
@@ -221,32 +229,115 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     def get_medication(self):
         return 'Medication is ' + self.medication
         
-    # Setter Methods
-    def set_medical_condition(self, medical_condition):
-        self.medical_condition = medical_condition
-        
-    def set_medication(self, medication):
-        self_medication = medication
-    
-    # Instantiating Patient Class
-    patient1 = Patient('Mark', 40, '2 Ocean Avenue', 11208, 'Banker', 'Broken Ankle', 'Aspirin')
-    
-    # Encapsulation restricts access to class properties to only class methods, and prevents inherited classes from modifying encapsluated properties.
-    
-    # Furthermore it allows private properties from being access outside of the class.
-    
-    # Safeguards to prevent sensitive information from being public information to other developers
-    
-    # An example of making a private class property (CANNOT BE ACCESSED OUTSIDE OF CLASS) is represented by a double underscore prefix (E.G __nameOfProperty)
-    
-    # You can add if statements which only returns conditions if certain conditions are true (if zipcode is set, if age is greater than 18, etc...)
-    
     # Method Overriding is a subclass which can override an inherited method from its parent by modifying the behavior of that method
     
     # An example is if the patient class can override get_address() method from its parent class (Person) so that when that method is called, it will function differently.
     
-
+    # Method overriding getter for address which originally belongs to the Person class.
+    def get_address(self):
+        return "Sorry, this data is confidential"
+        
+    # Setter Methods
+    def set_medical_condition(self, new_medical_condition):
+        self.medical_condition = new_medical_condition
+        
+    def set_medication(self, new_medication):
+        self.medication = new_medication
     
+    # Instantiating Patient Class
+    patient1 = Patient('Mark', 40, '2 Ocean Avenue', 11208, 'Banker', 'Broken Ankle', 'Aspirin')
+
+    # Printing the patient's address
+    print(patient1.get_address()) # This will return "Sorry this data is confidential" due to the method override seen above
+    
+    # Polymorphism means that an object can behave similary to that of another class.
+
+    # Creation of Cat Class
+    class Cat:
+        __init__(self, name, age, breed) # Constructor
+        
+        # Properties
+        self.name = name
+        self.age = age
+        self.breed = breed
+        
+        # Getters
+        def get_name(self):
+            return self.name
+
+        def get_age(self):
+            return self.age
+
+        def get_breed(self):
+            return self.breed
+
+        # General Personality of Cat
+        def sound(self):
+            return "Meow!"
+
+        def favorite_food(self):
+            return "Fish"
+
+        def temperment(self):
+            return "Cautious"
+
+        # Setter
+        def set_name(self, new_name):
+            self.name = new_name
+
+        def set_age(self, new_age):
+            self.age = new_age
+
+        def set_breed(self, new_breed):
+            self.breed = new_breed
+
+     # Creation of Dog Class
+    class Dog:
+        __init__(self, name, age, breed) # Constructor
+         
+        # Properties
+        self.name = name
+        self.age = age
+        self.breed = breed
+        
+        # Getters
+        def get_name(self):
+            return self.name
+
+        def get_age(self):
+            return self.age
+
+        def get_breed(self):
+            return self.breed
+
+        # General Personality of Dog
+        def sound(self):
+            return "Woof!"
+
+        def favorite_food(self):
+            return "Bones"
+
+        def temperment(self):
+            return "Friendly"
+
+        # Setter
+        def set_name(self, new_name):
+            self.name = new_name
+
+        def set_age(self, new_age):
+            self.age = new_age
+
+        def set_breed(self, new_breed):
+            self.breed = new_breed
+
+# Instantiating Object for Cat Class
+cat1 = Cat("Zeus", 2, "Calico")
+
+# Instatiating Object for Dog Class
+dog1 = Dog("Riley", 4, "Golden Retriever")
+
+
+
 
     
 
