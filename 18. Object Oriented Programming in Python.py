@@ -65,8 +65,9 @@ class Person:
     def __init__(self, name, age, address, occupation, zipcode): # Constructors are only called when an object in a class is created or instantiated
         # Properties - variables associated with particular class
         self.name = name
-        self.age = age # Encapsulation
-        self.address = address
+        self.age = age 
+        # Private Address "._"
+        self._address = address # Encapsulation, prevents you from getting the address of an object in the class can only be accessed by a getter or setter
         self.occupation = occupation
         self.zipcode = zipcode
         
@@ -94,6 +95,10 @@ class Person:
         self.name = new_name
 
     def set_age(self, new_age):
+        # If statements can be used as an error checkers within the setters
+        if new_age < 0:  # You cannot have a negative age
+            print("Error: Invalid Age")
+            return
         self.age = new_age
 
     def set_address(self, new_address):
