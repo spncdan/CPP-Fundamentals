@@ -229,7 +229,7 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
         self_medication = medication
     
     # Instantiating Patient Class
-    patient1 = Patient('Mark', 40, '2 Ocean Avenue', 'Broken Ankle', 'Aspirin')
+    patient1 = Patient('Mark', 40, '2 Ocean Avenue', 11208, 'Banker', 'Broken Ankle', 'Aspirin')
     
     # Encapsulation restricts access to class properties to only class methods, and prevents inherited classes from modifying encapsluated properties.
     
