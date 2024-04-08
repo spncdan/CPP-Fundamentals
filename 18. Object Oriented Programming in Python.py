@@ -66,8 +66,8 @@ class Person:
         # Properties - variables associated with particular class
         self.name = name
         self.age = age 
-        # Private Address "._"
-        self._address = address # Encapsulation, prevents you from getting the address of an object in the class can only be accessed by a getter or setter
+        # Private Address ".__"
+        self.__address = address # Encapsulation, prevents you from getting the address of an object in the class can only be accessed by a getter or setter
         self.occupation = occupation
         self.zipcode = zipcode
         
@@ -207,8 +207,12 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     # Let's say we are creating a database management system for a hospital, we can instead use patient here as a patient is a person but not all persons are a patient. Furthermore, a patient has all of the characteristics of a person as well.
     
     class Patient(Person): # Patient class is derived from Person class
-    def __init__(self, name, age, address, medical_condition, medication):
-    super().__init__(name, age, address) # Inheriting the properties of the person class
+    def __init__(self, name, age, address, zipcode, occupation, medical_condition, medication):
+    super().__init__(name, age, address, zipcode, occupation) # Inheriting the properties of the person class
+
+    # Properties of the class
+    self.medical_condition = medical_condition
+    self.medication = medication
     
     # Getter Methods
     def get_medical_condition(self):
@@ -241,7 +245,7 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     
     # An example is if the patient class can override get_address() method from its parent class (Person) so that when that method is called, it will function differently.
     
-    
+
     
 
     
