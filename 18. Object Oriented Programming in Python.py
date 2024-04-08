@@ -79,7 +79,7 @@ class Person:
         self.occupation = occupation
         self.zipcode = zipcode
         
-    # Getters: Methods which recieve data stored in class properties
+    # Getters: Methods (functions) which recieve data stored in class properties
     def get_name(self):
         return f'My name is ' + self.name
     
@@ -272,13 +272,13 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
             return self.breed
 
         # General Personality of Cat
-        def sound(self):
+        def get_sound(self):
             return "Meow!"
 
-        def favorite_food(self):
+        def get_favorite_food(self):
             return "Fish"
 
-        def temperment(self):
+        def get_temperament(self):
             return "Cautious"
 
         # Setter
@@ -311,13 +311,13 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
             return self.breed
 
         # General Personality of Dog
-        def sound(self):
+        def get_sound(self):
             return "Woof!"
 
-        def favorite_food(self):
+        def get_favorite_food(self):
             return "Bones"
 
-        def temperment(self):
+        def get_temperament(self):
             return "Friendly"
 
         # Setter
@@ -332,9 +332,27 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
 
 # Instantiating Object for Cat Class
 cat1 = Cat("Zeus", 2, "Calico")
+# Getting Sound for cat1
+print(cat1.get_sound())
 
 # Instatiating Object for Dog Class
 dog1 = Dog("Riley", 4, "Golden Retriever")
+# Getting sound for dog1
+print(dog1.get_sound())
+
+# Polymorphism
+# Setting cat1 = dog1 and therefore behavior of the cat takes on data of the dog class
+cat1 = dog1
+
+cat1.get_sound() # This would end up printing woof, as the dog object was assigned to the cat object
+
+# The only reason this worked is because both properties and methods had the same name for the getters and setters.
+
+for pet in (cat1, dog1):
+    print(pet.get_sound())
+    print(pet.get_temperament())
+
+
 
 
 
