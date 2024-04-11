@@ -77,6 +77,18 @@ class Person {
     
 };
 
+// Inheritance, creating new Employee class which takes from Person class
+
+class Employee : public Person {
+    public:
+    double salary;
+    string emplid;
+    string job_title;
+    
+    // Constructor
+    
+};
+
 // Main function
 int main(){
     
@@ -100,3 +112,4 @@ int main(){
     
     return 0;
 }
+
