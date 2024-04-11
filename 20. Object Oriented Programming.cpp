@@ -81,16 +81,22 @@ class Person {
 int main(){
     
     // Instantiating an object using person class in the order specified above
-    Person p1("Daniel", 20, "123 Main Street", 13203, "Software Developer");
+    Person p1("Daniel", 19, "123 Main Street", 13203, "Software Developer");
     
     // Example of using of getter
     cout << "My name is " << p1.get_name() << endl;
+    cout << "My age is " << p1.get_age() << endl;
+    cout << "My address is " << p1.get_address() << endl;
+    cout << "My zipcode is " << p1.get_zipcode() << endl;
+    cout << "My occupation is " << p1.get_occupation() << endl;
     
-    // Example of using a setter to change the name to "Dan" instead of Daniel
+    // Example of using a setter to change the name to "Dan" instead of Daniel and changing the age from 19 to 20.
     p1.set_name("Dan");
+    p1.set_age(20);
     
     // Example of using of getter to show the new change
     cout << "My new name is " << p1.get_name() << endl;
+    cout << "My new age is " << p1.get_age() << endl;
     
     return 0;
 }
