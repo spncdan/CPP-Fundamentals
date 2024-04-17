@@ -118,7 +118,7 @@
 
 // Gamma (Y) defines how far the impact of a training data point reaches.
 
-// Low gamm value tells us that we hsould consider far way point when deciding the deicsion boundary. This gives smooth linear separation between two classes.
+// Low gamma value tells us that we hsould consider far way point when deciding the deicsion boundary. This gives smooth linear separation between two classes.
 
 // High gamma value tells us that we should consider near points when deciding the decision boundary. This gives a curvy separation between two classes and may sometimes overfit the test data.
 
