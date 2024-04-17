@@ -82,10 +82,39 @@ class Person {
 class Employee : public Person {
     public:
     double salary;
-    string emplid;
+    int emplid;
     string job_title;
     
     // Constructor
+    Employee(string name, int age, string address, int zipcode, string occupation, double salary, int emplid, string job_title)
+    : Person(name, age, address, zipcode, occupation),
+    salary(salary), emplid(emplid), job_title(job_title){
+    }
+    // Getters
+    double get_salary(){
+        return salary;
+    }
+    
+    int get_emplid(){
+        return emplid;
+    }
+    
+    string get_job_title(){
+        return job_title;
+    }
+    
+    // Setters
+    void set_salary(double new_salary){
+        salary = new_salary;
+    }
+    
+    void set_emplid(int new_emplid){
+        emplid = new_emplid;
+    }
+    
+    void set_job_title(string new_job_title){
+        job_title = new_job_title;
+    }
     
 };
 
@@ -110,6 +139,22 @@ int main(){
     cout << "My new name is " << p1.get_name() << endl;
     cout << "My new age is " << p1.get_age() << endl;
     
+    // Instatiating an object using the employee class in the order specified in the subclass above
+    Employee e1("Joshua", 32, "594 New Street", 12945, "Cybersecurity Engineer", 59493.34, 192938832, "Cybersecurity Engineer II");
+    
+    // Examples of using getters for the employee class
+    cout << "My name is " << e1.get_name() << endl; // As you can see using the getters from the parent class of Person, is applicable here
+    cout << "My age is " << e1.get_age() << endl;
+    cout << "My salary is " << e1.get_salary() << endl; // Here we see getters which are unique to the employee class
+    cout << "My EMPLID is " << e1.get_emplid() << endl;
+    cout << "My job title is " << e1.get_job_title() << endl;
+    
+    // Examples of using setters for the employee class
+    e1.set_job_title("Senior Cybersecurity Engineer");
+    cout << "My new job title is " << e1.get_job_title() << endl;
+    
+    
     return 0;
 }
+
 
