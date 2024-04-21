@@ -20,11 +20,17 @@ class Person {
         string address;
         int zipcode;
         string occupation;
-    
+        // in order to access a private member you must use a getter and setter
+        
     // Public class properties can be accessed anywhere
     public:
         string name;
         int age;
+    /* Protected is a third access modifer where it is only accessed within class and derived classes (inherited)
+     protected:
+        int x;
+        int y;
+     */
     
     // Class constructor is a special function that only defines an object in the class and is ONLY called when an object is created
     Person(string name, int age, string address, int zipcode, string occupation):
@@ -153,8 +159,30 @@ int main(){
     e1.set_job_title("Senior Cybersecurity Engineer");
     cout << "My new job title is " << e1.get_job_title() << endl;
     
-    
     return 0;
 }
 
+// Virtual functions are those which are expected to override (replace) a method in a derived class.
+
+// Overriding: When a child class inherits a method from a parent class, the child class wishes to change the behavior or that method.
+
+// Example of Polymorphism (this should be before the main() function but this is purely for example)
+ 
+class Animal {
+public:
+    virtual void makeSound(){ // makeSound is a virtual method because we expect that when a child class inherits the method they will change the behavior
+        cout << "Sound sound" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() override {
+        cout << "Woof" << endl;
+    }
+};
+ 
+ 
+ 
+ 
 
