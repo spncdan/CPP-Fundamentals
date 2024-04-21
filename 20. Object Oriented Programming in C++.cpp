@@ -61,7 +61,7 @@ class Person {
     }
     
     // Getters allow us to return our object's contents/property (Be sure the function type corresponds to the property type)
-    string get_address(){
+    virtual string get_address(){ // We're going to turn this into a virtual method so we can override this in any subclasses we make derived from this class
         return this->address;
     }
     
@@ -147,6 +147,10 @@ class Patient : public Person {
         return medication;
     }
     
+    string get_address() override { // This will be so that if someone attempts to try to get a patients address from within the patient list that it will return that the data is confidential
+        return "Sorry, this data is confidential";
+    }
+    
     // Setters
     void set_medical_condition(string new_medical_condition){
         medical_condition = new_medical_condition;
@@ -216,11 +220,27 @@ int main(){
     // Instantiating an object from the derived patient class of the person class in order specified in the subclass.
     Patient o1("Nanami", 34, "102 Pine Street", 12933, "Janitor", "Pulled Muscle", "Aspirin");
     
+    // Examples of using getters for the patient class
+    cout << "The patient's name is " << o1.get_name() << endl;
+    cout << "The patient's age is " << o1.get_age() << endl;
+    cout << "The patient's address is " << o1.get_address() << endl;
+    cout << "The patient's zip code is " << o1.get_zipcode() << endl;
+    cout << "The patient's medical condition is " << o1.get_medical_conditon() << endl;
+    cout << "The patient's medication is " << o1.get_medication() << endl;
     
+    // Examples of using setters for the patient class
+    o1.set_medical_condition("Broken Wrist");
+    o1.set_medication("Advil");
+    cout << "The patient's adjusted medical condition is a " << o1.get_medical_conditon() << endl;
+    cout << "The patient's adjusted medication is " << o1.get_medication() << endl;
     
     return 0;
 }
 
+ 
+ 
+ 
+ 
  
  
  
