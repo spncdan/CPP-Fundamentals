@@ -40,7 +40,7 @@ class Person {
     }
     
     // Setters allows to set and change existing object's properties
-    void set_address(string new_address){
+    virtual void set_address(string new_address){ // We're going to turn this into a virtual method so we can override this in any subclasses derived from this class
         this->address = new_address;
     }
     
@@ -160,6 +160,10 @@ class Patient : public Person {
         medication = new_medication;
     }
     
+    void set_address(string new_address) override { // This will be so that if someone attempts to try and set the patient class then it will prevent them from going so
+        cout << "Sorry, you do not have permission change this data";
+    }
+    
 };
 
 // Virtual functions are those which are expected to override (replace) a method in a derived class.
@@ -223,7 +227,7 @@ int main(){
     // Examples of using getters for the patient class
     cout << "The patient's name is " << o1.get_name() << endl;
     cout << "The patient's age is " << o1.get_age() << endl;
-    cout << "The patient's address is " << o1.get_address() << endl;
+    cout << o1.get_address() << endl; // This will not give us the patient's address as it is confidential as seen in the code above.
     cout << "The patient's zip code is " << o1.get_zipcode() << endl;
     cout << "The patient's medical condition is " << o1.get_medical_conditon() << endl;
     cout << "The patient's medication is " << o1.get_medication() << endl;
