@@ -1,4 +1,4 @@
-// CIS 3100 2/26/2023
+// CIS 3100 2/26/23
 
 // Calculate the area of a triangle
 // User should be able to run the program as many times as needed
