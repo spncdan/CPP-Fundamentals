@@ -37,5 +37,29 @@ int main(){
     }
     cout << endl;
     
+    // dynamic Memory Allocation
+    // dynamically allocate an array of 7 integers
+    int* dynamicArray = new int[7];
+    // create a pointer to the dynamic array
+    int* temp = dynamicArray; // when creating a pointer for an array you dont need &
+    
+    for (int i = 0; i < 7; i++){
+     *temp = i + 1; // initalizing the array with elements
+      temp++; // moving to next element in array
+    }
+    
+    // to find the sum of all of the elements in the dynamic array above
+    // you must reset the pointer to the start of the array
+    temp = dynamicArray;
+    int sum = 0;
+    
+    for(int i = 0; i < 7; i++){
+        sum += *temp;
+        temp++;
+    }
+    
+    cout << "Sum: " << sum << endl;
+    
+    
     return 0;
 }
