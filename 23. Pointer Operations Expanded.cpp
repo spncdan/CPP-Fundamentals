@@ -71,7 +71,7 @@ int main(){
     
     // deallocation of memory
     delete[] dynamicArray;
-    dynamicArray = nullptr; // set pointer to nullptr to complete and ensure deallocation
+    dynamicArray = nullptr; // set pointer to nullptr to complete and ensure deallocation while also preventing dangling pointer issues.
     
     // smart pointers
     // use unique_ptr for automatic memory management
