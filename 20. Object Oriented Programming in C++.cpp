@@ -34,8 +34,7 @@ class Person {
      */
     
     // Class constructor is a special function that only defines an object in the class and is ONLY called when an object is created
-    Person(string name, int age, string address, int zipcode, string occupation):
-        name(name), age(age), address(address), zipcode(zipcode), occupation(occupation){
+    Person(string name, int age, string address, int zipcode, string occupation): name(name), age(age), address(address), zipcode(zipcode), occupation(occupation){
         //insert code to run when the constructor is called
     }
     
