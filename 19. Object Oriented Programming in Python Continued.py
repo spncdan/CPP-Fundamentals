@@ -1,4 +1,3 @@
-
 # In-class CIS 3100 Object Oriented Programming Python Activity
 
 # Methods explored: Inheritance
