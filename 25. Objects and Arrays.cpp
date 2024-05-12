@@ -1,4 +1,4 @@
-// CIS 5/8
+// CIS 3100 5/8
 
 /* Objects and Arrays */
 
