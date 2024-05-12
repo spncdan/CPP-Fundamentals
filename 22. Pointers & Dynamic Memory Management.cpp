@@ -1,4 +1,4 @@
-// CIS 3100 5/6
+// CIS 3100 5/1
 
 // Pointers and Dynamic Memory Management
 
