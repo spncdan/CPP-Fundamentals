@@ -58,13 +58,10 @@
 # "self" glues these instances together(
 
 class Person:
-    # Static variable which will help keep track of how many objects are in this particular class
-    count = 0
     # Creation of own data type
     # Constructor
     # Methods are special functions that belong in a class
     def __init__(self, name, age, address, occupation, zipcode): # Constructors are only called when an object in a class is created or instantiated
-        Person.count += 1 # increasing static variable when class is created
         # Properties - variables associated with particular class
         self.name = name
         self.age = age
@@ -240,11 +237,6 @@ class Employee(Person): # We add Person in parenthesis to show that the class Em
     # Method Overriding is a subclass which can override an inherited method from its parent by modifying the behavior of that method
     
     # An example is if the patient class can override get_address() method from its parent class (Person) so that when that method is called, it will function differently.
-
-    # printing count of objects in Person class.
-    print(f'Number of Objects Created: {Person.count}')
-    
-
 
 
 
