@@ -87,7 +87,9 @@ class Sous_Chef(Cook):
 
     def set_speciality(self, speciality):
         self.speciality = speciality
-        
+
+# Chef class which inherits Sous_Chef class
+
 class Chef(Sous_Chef):
     def __init__(self, name, address, telephone, social_sec_num, bank_acc_num, yrs_of_exp, institute_attended, speciality, num_of_awards, num_of_shows):
         super().__init__(name, address, telephone, social_sec_num, bank_acc_num, yrs_of_exp, institute_attended, speciality)
@@ -141,9 +143,9 @@ class Server(Employee):
     def set_num_of_neg(self, num_of_neg):
         self.num_of_neg = num_of_neg
 
-# Janior class which inherits Employee class
+# Janitor class which inherits Employee class
 
-class Server(Employee):
+class Janitor(Employee):
     def __init__(self, name, address, telephone, social_sec_num, bank_acc_num, yrs_of_exp, maintenance_training):
         super().__init__(self, name, address, telephone, social_sec_num, bank_acc_num)
 
