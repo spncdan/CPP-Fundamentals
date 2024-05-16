@@ -65,7 +65,7 @@ class Person:
         # Properties - variables associated with particular class
         self.name = name
         self.age = age
-        self._address = address # Encapsulation, prevents you from getting the address of an object in the class can only be accessed by a getter or setter
+        self.__address = address # Encapsulation, prevents you from getting the address of an object outside the class can only be accessed by a getter or setter (prevents direct access such as print(p1.address))
         self.occupation = occupation
         self.zipcode = zipcode
         
@@ -74,7 +74,7 @@ class Person:
         return f'My name is ' + self.name
     
     def get_address(self):
-        return f'My address is ' + self.address
+        return f'My address is ' + self.__address
     
     def get_zipcode(self):
         return f'My zip code is ' + str(self.zipcode)
@@ -84,11 +84,8 @@ class Person:
     
     def get_occupation(self):
         return f'My occupation is ' + self.occupation
-    
-    def set_address(self, address):
-        self.address = address
 
-    # Setters: Methods which update or Change Class Properties
+    # Setters: Methods which update or Change Class Properties      
     def set_name(self, new_name):
         self.name = new_name
 
@@ -96,7 +93,7 @@ class Person:
         self.age = new_age
 
     def set_address(self, new_address):
-        self.address = new_address
+        self.__address = new_address
 
     def set_zipcode(self, new_zipcode):
         self.zipcode = new_zipcode
