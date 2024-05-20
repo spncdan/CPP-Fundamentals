@@ -49,7 +49,7 @@ class Employee:
 
 # Inheritance of Employee class for Cook class
 
-class Cook(Employee): # We add Person in parenthesis to show that the class Employee is derived from the Person class
+class Cook(Employee): # We add Employee in parenthesis to show that the class Cook is derived from the Employee class
     def __init__(self, name, address, telephone, social_sec_num, bank_acc_num, yrs_of_exp): # Constructor
         super().__init__(name, address, telephone, social_sec_num, bank_acc_num) # super().__init__ refers to referencing the constructor of the parent class of Person which makes it so you do not need to rewrite the properties of the parent class.
         
