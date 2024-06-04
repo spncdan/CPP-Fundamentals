@@ -185,7 +185,7 @@ class Manager(Employee):
     def get_tertiary_degree(self):
         return self.tertiary_degree
     
-    def num_of_employees(self):
+    def get_num_of_employees(self):
         return self.num_of_employees
     
     # Setters
@@ -324,6 +324,106 @@ print(p4.get_num_of_awards())
 print(p4.get_num_of_shows())
 
 # Server Class Example ----------------------------------------------------
+p5 = Server('Simon Riley', '600 Essex Street', 7429349342, 49382, 902934, 6, 2, 1)
+
+# Printing out properties
+print(p5.get_name())
+print(p5.get_address())
+print(p5.get_telephone())
+print(p5.get_social_sec_num())
+print(p5.get_bank_acc_num())
+print(p5.get_yrs_of_exp())
+print(p5.get_num_of_pos())
+print(p5.get_num_of_neg())
+
+# Resetting properties
+p5.set_name('Simon Hendricks')
+p5.set_address('515 Austin Street')
+p5.set_telephone(3464567545)
+p5.set_social_sec_num(12253)
+p5.set_bank_acc_num(644542)
+p5.set_yrs_of_exp(6)
+p5.set_num_of_pos(4)
+p5.set_num_of_neg(2)
+
+# Printing out updated properties
+print(p5.get_name())
+print(p5.get_address())
+print(p5.get_telephone())
+print(p5.get_social_sec_num())
+print(p5.get_bank_acc_num())
+print(p5.get_yrs_of_exp())
+print(p5.get_num_of_pos())
+print(p5.get_num_of_neg())
+
+# Janitor Class Example ----------------------------------------------------
+p6 = Janitor('Damien Krueger', '123 Elm Street', 4569322345, 928394, 10, 4)
+
+# Printing out properties
+print(p6.get_name())
+print(p6.get_address())
+print(p6.get_telephone())
+print(p6.get_social_sec_num())
+print(p6.get_bank_acc_num())
+print(p6.get_yrs_of_exp())
+print(p6.get_maintenance_training())
+
+# Resetting properties
+p6.set_name('Dallas Krueger')
+p6.set_address('100 Elm Street')
+p6.set_telephone(4465667545)
+p6.set_social_sec_num(13453)
+p6.set_bank_acc_num(312352)
+p6.set_yrs_of_exp(7)
+p6.set_maintenance_training(6)
+
+# Printing out updated properties
+print(p6.get_name())
+print(p6.get_address())
+print(p6.get_telephone())
+print(p6.get_social_sec_num())
+print(p6.get_bank_acc_num())
+print(p6.get_yrs_of_exp())
+print(p6.get_maintenance_training())
+
+# Manager Class Example ----------------------------------------------------
+p7 = Manager('Sofia Claufer', '352 North Ave', 7483922345, 64334, 123432, 7, 'Business Management', 14)
+
+# Printing out properties
+print(p7.get_name())
+print(p7.get_address())
+print(p7.get_telephone())
+print(p7.get_social_sec_num())
+print(p7.get_bank_acc_num())
+print(p7.get_yrs_of_exp())
+print(p7.get_tertiary_degree())
+print(p7.get_num_of_employees())
+
+# Resetting properties
+p7.set_name('Sofia Claus')
+p7.set_address('350 North Ave')
+p7.set_telephone(7445922345)
+p7.set_social_sec_num(62334)
+p7.set_bank_acc_num(754452)
+p7.set_yrs_of_exp(8)
+p7.set_tertiary_degree('Computer Information Systems')
+p7.set_num_of_employees(23)
+
+# Printing out updated properties
+print(p7.get_name())
+print(p7.get_address())
+print(p7.get_telephone())
+print(p7.get_social_sec_num())
+print(p7.get_bank_acc_num())
+print(p7.get_yrs_of_exp())
+print(p7.get_tertiary_degree())
+print(p7.get_num_of_employees())
+
+
+
+
+
+
 
 
                 
