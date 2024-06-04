@@ -47,7 +47,7 @@ class Employee:
     def set_bank_acc_num(self, new_bank_acc_num):
         self.occupation = new_bank_acc_num
 
-# Inheritance of Employee class for Cook class
+# Cook class which inherits Employee class
 
 class Cook(Employee): # We add Employee in parenthesis to show that the class Cook is derived from the Employee class
     def __init__(self, name, address, telephone, social_sec_num, bank_acc_num, yrs_of_exp): # Constructor
@@ -64,7 +64,7 @@ class Cook(Employee): # We add Employee in parenthesis to show that the class Co
     def set_yrs_of_exp(self, yrs_of_exp):
             self.yrs_of_exp = yrs_of_exp
 
-# Inheritance of Cook class for Sous Chef class
+# Sous_Chef class which inherits Cook class
 
 class Sous_Chef(Cook):
     def __init__(self, name, address, telephone, social_sec_num, bank_acc_num, yrs_of_exp, institute_attended, speciality):
@@ -217,7 +217,7 @@ p1.set_telephone(3422342934)
 p1.set_social_sec_num(15844)
 p1.set_bank_acc_num(195483)
 
-# Reprinting new properties
+# Printing out updated properties
 print(p1.get_name())
 print(p1.get_address())
 print(p1.get_telephone())
@@ -243,7 +243,7 @@ p2.set_social_sec_num(15844)
 p2.set_bank_acc_num(195483)
 p2.set_yrs_of_exp(5)
 
-# Printing out properties
+# Printing out updated properties
 print(p2.get_name())
 print(p2.get_address())
 print(p2.get_telephone())
@@ -254,8 +254,76 @@ print(p2.get_yrs_of_exp())
 # Sous Chef Class Example ----------------------------------------------------
 p3 = Sous_Chef('Johnson Merger', '942 Former Street', 3927593934, 29103, 684239, 7, 'Harvard University', 'Seasoning')
 
+# Printing out properties
+print(p3.get_name())
+print(p3.get_address())
+print(p3.get_telephone())
+print(p3.get_social_sec_num())
+print(p3.get_bank_acc_num())
+print(p3.get_yrs_of_exp())
+print(p3.get_institute_attended())
+print(p3.get_speciality())
 
+# Resetting properties
+p3.set_name('Daniel Brown')
+p3.set_address('630 River Ave')
+p3.set_telephone(3424367365)
+p3.set_social_sec_num(16474)
+p3.set_bank_acc_num(195483)
+p3.set_yrs_of_exp(3)
+p3.set_institute_attended("Cornell University")
+p3.set_speciality("Soup")
 
+# Printing out updated properties
+print(p3.get_name())
+print(p3.get_address())
+print(p3.get_telephone())
+print(p3.get_social_sec_num())
+print(p3.get_bank_acc_num())
+print(p3.get_yrs_of_exp())
+print(p3.get_institute_attended())
+print(p3.get_speciality())
+
+# Chef Class Example ----------------------------------------------------
+p4 = Chef('Phillip Graves', '506 Austin Street', 3590231930, 12940, 105403, 5, 'Baruch College', 'Frying', 3, 4)
+
+# Printing out properties
+print(p4.get_name())
+print(p4.get_address())
+print(p4.get_telephone())
+print(p4.get_social_sec_num())
+print(p4.get_bank_acc_num())
+print(p4.get_yrs_of_exp())
+print(p4.get_institute_attended())
+print(p4.get_speciality())
+print(p4.get_num_of_awards())
+print(p4.get_num_of_shows())
+
+# Resetting properties
+p4.set_name('Phillip Gaben')
+p4.set_address('510 Austin Street')
+p4.set_telephone(3364567545)
+p4.set_social_sec_num(14254)
+p4.set_bank_acc_num(645542)
+p4.set_yrs_of_exp(7)
+p4.set_institute_attended("Saint Johns University")
+p4.set_speciality("Preparation")
+p4.set_num_of_awards(6)
+p4.set_num_of_shows(2)
+
+# Printing out updated properties
+print(p4.get_name())
+print(p4.get_address())
+print(p4.get_telephone())
+print(p4.get_social_sec_num())
+print(p4.get_bank_acc_num())
+print(p4.get_yrs_of_exp())
+print(p4.get_institute_attended())
+print(p4.get_speciality())
+print(p4.get_num_of_awards())
+print(p4.get_num_of_shows())
+
+# Server Class Example ----------------------------------------------------
 
 
                 
