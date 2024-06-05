@@ -97,28 +97,28 @@ class Employee : public Person {
     }
     // Getters
     double get_salary(){
-        return salary;
+        return this->salary;
     }
     
     int get_emplid(){
-        return emplid;
+        return this->emplid;
     }
     
     string get_job_title(){
-        return job_title;
+        return this->job_title;
     }
     
     // Setters
     void set_salary(double new_salary){
-        salary = new_salary;
+        this->salary = new_salary;
     }
     
     void set_emplid(int new_emplid){
-        emplid = new_emplid;
+        this->emplid = new_emplid;
     }
     
     void set_job_title(string new_job_title){
-        job_title = new_job_title;
+        this->job_title = new_job_title;
     }
     
 };
@@ -139,11 +139,11 @@ class Patient : public Person {
 
     // Getters
     string get_medical_conditon(){
-        return medical_condition;
+        return this->medical_condition;
     }
     
     string get_medication(){
-        return medication;
+        return this->medication;
     }
     
     string get_address() override { // This will be so that if someone attempts to try to get a patients address from within the patient list that it will return that the data is confidential
@@ -152,11 +152,11 @@ class Patient : public Person {
     
     // Setters
     void set_medical_condition(string new_medical_condition){
-        medical_condition = new_medical_condition;
+        this->medical_condition = new_medical_condition;
     }
     
     void set_medication(string new_medication){
-        medication = new_medication;
+        this->medication = new_medication;
     }
     
     void set_address(string new_address) override { // This will be so that if someone attempts to try and set the patient class then it will prevent them from going so
